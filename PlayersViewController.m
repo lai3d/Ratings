@@ -8,6 +8,7 @@
 
 #import "PlayersViewController.h"
 #import "Player.h"
+#import "PlayerCell.h"
 
 @interface PlayersViewController ()
 
@@ -56,21 +57,29 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell" forIndexPath:indexPath];
+//    
+//    // Configure the cell...
+//    Player *player = [self.players objectAtIndex:indexPath.row];
+//    //cell.textLabel.text = player.name;
+//    //cell.detailTextLabel.text = player.game;
+//
+//    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+//    nameLabel.text = player.name;
+//    
+//    UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
+//    gameLabel.text = player.name;
+//    
+//    UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
+//    ratingImageView.image = [self imageForRating:player.rating];
+//    
+    PlayerCell *cell = (PlayerCell *)[tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
     
-    // Configure the cell...
     Player *player = [self.players objectAtIndex:indexPath.row];
-    //cell.textLabel.text = player.name;
-    //cell.detailTextLabel.text = player.game;
+    cell.nameLabel.text = player.name;
+    cell.gameLabel.text = player.game;
+    cell.ratingImageView.image = [self imageForRating:player.rating];
 
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-    nameLabel.text = player.name;
-    
-    UILabel *gameLabel = (UILabel *)[cell viewWithTag:101];
-    gameLabel.text = player.name;
-    
-    UIImageView * ratingImageView = (UIImageView *)[cell viewWithTag:102];
-    ratingImageView.image = [self imageForRating:player.rating];
     
     return cell;
 }
@@ -84,17 +93,18 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [self.players removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

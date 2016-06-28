@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="55" id="fAP-n2-irG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="55" id="fAP-n2-irG" customClass="PlayerCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fAP-n2-irG" id="oeD-Hq-nAp">
@@ -47,6 +47,11 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="kyx-mx-Vog" secondAttribute="trailing" constant="33" id="riE-6L-vFd"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="gameLabel" destination="AOa-qC-Ukv" id="mX1-b1-0WZ"/>
+                                    <outlet property="nameLabel" destination="XzG-Rq-GXV" id="6nl-Cu-hWY"/>
+                                    <outlet property="ratingImageView" destination="kyx-mx-Vog" id="XI6-kg-7FD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +63,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHA-NZ-sTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="86"/>
+            <point key="canvasLocation" x="1211" y="71"/>
         </scene>
         <!--Gestures-->
         <scene sceneID="EI7-Ui-2gM">

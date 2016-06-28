@@ -39,6 +39,7 @@
 		282CF5381D212BBE009631B7 /* Players@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 282CF5201D212BBE009631B7 /* Players@2x.png */; };
 		282CF53E1D213319009631B7 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF53D1D213319009631B7 /* PlayersViewController.m */; };
 		282CF5411D21339A009631B7 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF5401D21339A009631B7 /* Player.m */; };
+		282CF5441D221C3C009631B7 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF5431D221C3C009631B7 /* PlayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		282CF53D1D213319009631B7 /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayersViewController.m; path = ../PlayersViewController.m; sourceTree = "<group>"; };
 		282CF53F1D21339A009631B7 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		282CF5401D21339A009631B7 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		282CF5421D221C3C009631B7 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		282CF5431D221C3C009631B7 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				282CF5401D21339A009631B7 /* Player.m */,
 				282CF53C1D213319009631B7 /* PlayersViewController.h */,
 				282CF53D1D213319009631B7 /* PlayersViewController.m */,
+				282CF5421D221C3C009631B7 /* PlayerCell.h */,
+				282CF5431D221C3C009631B7 /* PlayerCell.m */,
 				282CF4F41D211908009631B7 /* AppDelegate.h */,
 				282CF4F51D211908009631B7 /* AppDelegate.m */,
 				282CF4F71D211908009631B7 /* ViewController.h */,
@@ -268,6 +273,7 @@
 				282CF53E1D213319009631B7 /* PlayersViewController.m in Sources */,
 				282CF4F61D211908009631B7 /* AppDelegate.m in Sources */,
 				282CF4F31D211908009631B7 /* main.m in Sources */,
+				282CF5441D221C3C009631B7 /* PlayerCell.m in Sources */,
 				282CF5411D21339A009631B7 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +425,7 @@
 				282CF5071D211908009631B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
