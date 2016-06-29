@@ -25,7 +25,12 @@
 - (IBAction)done:(id)sender
 {
     NSLog(@"Done button click");
-    [self.delegate playerDetailsViewControllerDidSave:self];
+    Player *player = [[Player alloc] init];
+    player.name = self.nameTextField.text;
+    player.game = @"Chess";
+    player.rating = 1;
+    [self.delegate playerDetailsViewController:self didAddPlayer:player];
+    //[self.delegate playerDetailsViewControllerDidSave:self];
 }
 
 - (void)viewDidLoad {

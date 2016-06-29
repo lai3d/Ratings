@@ -18,6 +18,20 @@
 
 @synthesize players;
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder]))
+    {
+        NSLog(@"init PlayerDetailsViewController");
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"dealloc PlayerDetailsViewController");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -137,8 +151,18 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)playerDetailsViewControllerDidSave:(PlayerDetailsViewController *)controller
+//- (void)playerDetailsViewControllerDidSave:(PlayerDetailsViewController *)controller
+//{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+
+- (void)playerDetailsViewController:(PlayerDetailsViewController *)controller
+                       didAddPlayer:(Player *)player
 {
+    [self.players addObject:player];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.players count] - 1 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
