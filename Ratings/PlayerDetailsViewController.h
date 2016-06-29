@@ -20,6 +20,8 @@
 @interface PlayerDetailsViewController : UITableViewController
 
 @property (nonatomic, weak) id <PlayerDetailsViewControllerDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UILabel *detailLabel;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;
