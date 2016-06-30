@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
+#import "GamePickerViewController.h"
 
 @class PlayerDetailsViewController;
 
@@ -19,7 +20,7 @@
 
 @end
 
-@interface PlayerDetailsViewController : UITableViewController
+@interface PlayerDetailsViewController : UITableViewController <GamePickerViewControllerDelegate>
 
 @property (nonatomic, weak) id <PlayerDetailsViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
