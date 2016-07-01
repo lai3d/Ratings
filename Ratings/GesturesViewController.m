@@ -6,13 +6,13 @@
 //  Copyright © 2016 Super Fun. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GesturesViewController.h"
 
-@interface ViewController ()
+@interface GesturesViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GesturesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

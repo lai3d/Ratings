@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		282CF4F31D211908009631B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F21D211908009631B7 /* main.m */; };
 		282CF4F61D211908009631B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F51D211908009631B7 /* AppDelegate.m */; };
-		282CF4F91D211908009631B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F81D211908009631B7 /* ViewController.m */; };
+		282CF4F91D211908009631B7 /* GesturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F81D211908009631B7 /* GesturesViewController.m */; };
 		282CF4FC1D211908009631B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FA1D211908009631B7 /* Main.storyboard */; };
 		282CF4FE1D211908009631B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FD1D211908009631B7 /* Assets.xcassets */; };
 		282CF5011D211908009631B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FF1D211908009631B7 /* LaunchScreen.storyboard */; };
@@ -42,6 +42,7 @@
 		282CF5471D22278C009631B7 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF5461D22278C009631B7 /* PlayersViewController.m */; };
 		282CF54D1D22493C009631B7 /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */; };
 		282CF5501D24F1B6009631B7 /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */; };
+		28A991661D267BBB00C93BB5 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A991651D267BBB00C93BB5 /* RankingViewController.m */; };
 		28B535BC1D2660C200B52DE1 /* RatePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +51,8 @@
 		282CF4F21D211908009631B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		282CF4F41D211908009631B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		282CF4F51D211908009631B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		282CF4F71D211908009631B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		282CF4F81D211908009631B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		282CF4F71D211908009631B7 /* GesturesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GesturesViewController.h; sourceTree = "<group>"; };
+		282CF4F81D211908009631B7 /* GesturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GesturesViewController.m; sourceTree = "<group>"; };
 		282CF4FB1D211908009631B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		282CF4FD1D211908009631B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		282CF5001D211908009631B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +91,8 @@
 		282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
 		282CF54E1D24F1B6009631B7 /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
 		282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
+		28A991641D267BBB00C93BB5 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		28A991651D267BBB00C93BB5 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatePlayerViewController.h; sourceTree = "<group>"; };
 		28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatePlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,10 +130,14 @@
 			children = (
 				282CF54E1D24F1B6009631B7 /* GamePickerViewController.h */,
 				282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */,
+				282CF4F71D211908009631B7 /* GesturesViewController.h */,
+				282CF4F81D211908009631B7 /* GesturesViewController.m */,
 				282CF54B1D22493C009631B7 /* PlayerDetailsViewController.h */,
 				282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */,
 				282CF5451D22278C009631B7 /* PlayersViewController.h */,
 				282CF5461D22278C009631B7 /* PlayersViewController.m */,
+				28A991641D267BBB00C93BB5 /* RankingViewController.h */,
+				28A991651D267BBB00C93BB5 /* RankingViewController.m */,
 				28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */,
 				28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */,
 				282CF53F1D21339A009631B7 /* Player.h */,
@@ -139,8 +146,6 @@
 				282CF5431D221C3C009631B7 /* PlayerCell.m */,
 				282CF4F41D211908009631B7 /* AppDelegate.h */,
 				282CF4F51D211908009631B7 /* AppDelegate.m */,
-				282CF4F71D211908009631B7 /* ViewController.h */,
-				282CF4F81D211908009631B7 /* ViewController.m */,
 				282CF4FA1D211908009631B7 /* Main.storyboard */,
 				282CF4FD1D211908009631B7 /* Assets.xcassets */,
 				282CF4FF1D211908009631B7 /* LaunchScreen.storyboard */,
@@ -285,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B535BC1D2660C200B52DE1 /* RatePlayerViewController.m in Sources */,
-				282CF4F91D211908009631B7 /* ViewController.m in Sources */,
+				282CF4F91D211908009631B7 /* GesturesViewController.m in Sources */,
 				282CF4F61D211908009631B7 /* AppDelegate.m in Sources */,
 				282CF4F31D211908009631B7 /* main.m in Sources */,
 				282CF5471D22278C009631B7 /* PlayersViewController.m in Sources */,
@@ -293,6 +298,7 @@
 				282CF5441D221C3C009631B7 /* PlayerCell.m in Sources */,
 				282CF5411D21339A009631B7 /* Player.m in Sources */,
 				282CF54D1D22493C009631B7 /* PlayerDetailsViewController.m in Sources */,
+				28A991661D267BBB00C93BB5 /* RankingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

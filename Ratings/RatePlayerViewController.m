@@ -37,7 +37,7 @@
 */
 
 - (IBAction)rateAction:(UIButton *)sender {
-    self.player.rating = sender.tag;
+    self.player.rating = (int)sender.tag;
     [self.delegate ratePlayerViewController:self didPickRatingForPlayer:self.player];
 }
 

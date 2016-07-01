@@ -281,14 +281,41 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe right for BEST players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-O6-pzm">
+                                <rect key="frame" x="167" y="106" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Double tap for WORST players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgX-J7-4cw">
+                                <rect key="frame" x="159" y="171" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Yfb-BY-mlB" appends="YES" id="NK3-C4-nxf"/>
+                            <outletCollection property="gestureRecognizers" destination="ybw-uD-Yii" appends="YES" id="UAb-oR-qa7"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures.png" id="0Cs-gR-he9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-q2-4s6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Yfb-BY-mlB">
+                    <connections>
+                        <segue destination="RQQ-io-c1P" kind="modal" identifier="BestPlayers" id="Q8j-ww-lUM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="ybw-uD-Yii">
+                    <connections>
+                        <segue destination="RQQ-io-c1P" kind="modal" identifier="WorstPlayers" id="qi9-na-78E"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="360" y="769"/>
+            <point key="canvasLocation" x="360" y="846"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lJu-tJ-pTh">
@@ -346,6 +373,47 @@
             </objects>
             <point key="canvasLocation" x="2010" y="71"/>
         </scene>
+        <!--Ranking-->
+        <scene sceneID="HiI-oU-pfA">
+            <objects>
+                <tableViewController id="j0C-lE-X9k" customClass="RankingViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mrs-s4-uN8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="j0C-lE-X9k" id="zG7-t3-eU6"/>
+                            <outlet property="delegate" destination="j0C-lE-X9k" id="DZf-xr-JR5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ranking" id="8dn-iB-rwc">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="4wk-FJ-LUs">
+                            <connections>
+                                <action selector="done:" destination="j0C-lE-X9k" id="K1t-XS-Ata"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pok-CQ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="846"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xbf-0q-bXZ">
+            <objects>
+                <navigationController id="RQQ-io-c1P" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mZk-3u-I1q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j0C-lE-X9k" kind="relationship" relationship="rootViewController" id="H0d-Zo-WFW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2V-Nn-YcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211" y="846"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1Star.png" width="38" height="38"/>
@@ -358,5 +426,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LaW-C3-noF"/>
+        <segue reference="qi9-na-78E"/>
     </inferredMetricsTieBreakers>
 </document>
