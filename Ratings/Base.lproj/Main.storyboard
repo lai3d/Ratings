@@ -51,6 +51,7 @@
                                     <outlet property="gameLabel" destination="AOa-qC-Ukv" id="mX1-b1-0WZ"/>
                                     <outlet property="nameLabel" destination="XzG-Rq-GXV" id="6nl-Cu-hWY"/>
                                     <outlet property="ratingImageView" destination="kyx-mx-Vog" id="XI6-kg-7FD"/>
+                                    <segue destination="jxm-bM-Td2" kind="modal" identifier="EditPlayer" id="quE-CC-cPz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -283,4 +284,7 @@
         <image name="Gestures.png" width="30" height="30"/>
         <image name="Players.png" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="quE-CC-cPz"/>
+    </inferredMetricsTieBreakers>
 </document>

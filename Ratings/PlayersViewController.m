@@ -32,6 +32,26 @@
     NSLog(@"dealloc PlayerDetailsViewController");
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddPlayer"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        PlayerDetailsViewController *playerDetailsViewController = [[navigationController viewControllers] objectAtIndex:0];
+        playerDetailsViewController.delegate = self;
+    }
+    else if([segue.identifier isEqualToString:@"EditPlayer"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        PlayerDetailsViewController *playerDetailsViewController = [navigationController viewControllers][0];
+        playerDetailsViewController.delegate = self;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Player *player = self.players[indexPath.row];
+        playerDetailsViewController.playerToEdit = player;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -166,14 +186,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)playerDetailsViewController:(PlayerDetailsViewController *)controller
+                      didEditPlayer:(Player *)player
 {
-    if ([segue.identifier isEqualToString:@"AddPlayer"])
-    {
-        UINavigationController *navigationController = segue.destinationViewController;
-        PlayerDetailsViewController *playerDetailsViewController = [[navigationController viewControllers] objectAtIndex:0];
-        playerDetailsViewController.delegate = self;
-    }
+    NSUInteger index = [self.players indexOfObject:player];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

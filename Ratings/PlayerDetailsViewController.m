@@ -27,12 +27,19 @@
 - (IBAction)done:(id)sender
 {
     NSLog(@"Done button click");
-    Player *player = [[Player alloc] init];
-    player.name = self.nameTextField.text;
-    player.game = game;
-    player.rating = 1;
-    [self.delegate playerDetailsViewController:self didAddPlayer:player];
-    //[self.delegate playerDetailsViewControllerDidSave:self];
+    if(self.playerToEdit != nil) {
+        self.playerToEdit.name = self.nameTextField.text;
+        self.playerToEdit.game = game;
+        
+        [self.delegate playerDetailsViewController:self didEditPlayer:self.playerToEdit];
+    } else {
+        Player *player = [[Player alloc] init];
+        player.name = self.nameTextField.text;
+        player.game = game;
+        player.rating = 1;
+        [self.delegate playerDetailsViewController:self didAddPlayer:player];
+        //[self.delegate playerDetailsViewControllerDidSave:self];
+    }
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -55,6 +62,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if(self.playerToEdit != nil) {
+        self.title = @"Edit Player";
+        self.nameTextField.text = self.playerToEdit.name;
+        game = self.playerToEdit.game;
+    }
     
     self.detailLabel.text = game;
     
