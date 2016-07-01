@@ -42,6 +42,7 @@
 		282CF5471D22278C009631B7 /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF5461D22278C009631B7 /* PlayersViewController.m */; };
 		282CF54D1D22493C009631B7 /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */; };
 		282CF5501D24F1B6009631B7 /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */; };
+		28B535BC1D2660C200B52DE1 /* RatePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,8 @@
 		282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
 		282CF54E1D24F1B6009631B7 /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
 		282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
+		28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatePlayerViewController.h; sourceTree = "<group>"; };
+		28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatePlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				282CF54C1D22493C009631B7 /* PlayerDetailsViewController.m */,
 				282CF5451D22278C009631B7 /* PlayersViewController.h */,
 				282CF5461D22278C009631B7 /* PlayersViewController.m */,
+				28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */,
+				28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */,
 				282CF53F1D21339A009631B7 /* Player.h */,
 				282CF5401D21339A009631B7 /* Player.m */,
 				282CF5421D221C3C009631B7 /* PlayerCell.h */,
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B535BC1D2660C200B52DE1 /* RatePlayerViewController.m in Sources */,
 				282CF4F91D211908009631B7 /* ViewController.m in Sources */,
 				282CF4F61D211908009631B7 /* AppDelegate.m in Sources */,
 				282CF4F31D211908009631B7 /* main.m in Sources */,

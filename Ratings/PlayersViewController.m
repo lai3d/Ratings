@@ -50,6 +50,15 @@
         Player *player = self.players[indexPath.row];
         playerDetailsViewController.playerToEdit = player;
     }
+    else if([segue.identifier isEqualToString:@"RatePlayer"])
+    {
+        RatePlayerViewController *ratePlayerViewController = segue.destinationViewController;
+        ratePlayerViewController.delegate = self;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Player *player = self.players[indexPath.row];
+        ratePlayerViewController.player = player;
+    }
 }
 
 - (void)viewDidLoad {
@@ -140,6 +149,11 @@
     }   
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"EditPlayer" sender:cell];
+}
+
 /*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
@@ -193,6 +207,15 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - RatePlayerViewControllerDelegate
+
+- (void)ratePlayerViewController:(RatePlayerViewController *)controller didPickRatingForPlayer:(Player *)player {
+    NSUInteger index = [self.players indexOfObject:player];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

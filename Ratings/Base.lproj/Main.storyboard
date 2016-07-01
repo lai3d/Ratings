@@ -14,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="55" id="fAP-n2-irG" customClass="PlayerCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="55" id="fAP-n2-irG" customClass="PlayerCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fAP-n2-irG" id="oeD-Hq-nAp">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzG-Rq-GXV">
@@ -40,18 +40,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="102" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-mx-Vog">
-                                            <rect key="frame" x="486" y="0.0" width="81" height="46"/>
+                                            <rect key="frame" x="333" y="0.0" width="81" height="46"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="kyx-mx-Vog" secondAttribute="trailing" constant="33" id="riE-6L-vFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="kyx-mx-Vog" secondAttribute="trailing" constant="100" id="riE-6L-vFd"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="gameLabel" destination="AOa-qC-Ukv" id="mX1-b1-0WZ"/>
                                     <outlet property="nameLabel" destination="XzG-Rq-GXV" id="6nl-Cu-hWY"/>
                                     <outlet property="ratingImageView" destination="kyx-mx-Vog" id="XI6-kg-7FD"/>
-                                    <segue destination="jxm-bM-Td2" kind="modal" identifier="EditPlayer" id="quE-CC-cPz"/>
+                                    <segue destination="Tux-MZ-nHx" kind="push" identifier="RatePlayer" id="tDK-eH-2kN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,6 +67,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="jxm-bM-Td2" kind="modal" identifier="EditPlayer" id="LaW-C3-noF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHA-NZ-sTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +160,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RI-Wk-U8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2822" y="71"/>
+        </scene>
+        <!--Rate Player-->
+        <scene sceneID="svG-pi-3ui">
+            <objects>
+                <viewController id="Tux-MZ-nHx" customClass="RatePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="add-Cf-Qx4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rnX-b1-gmW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKF-oS-ak5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-rQ-EJ2">
+                                <rect key="frame" x="153" y="168" width="307" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8s-nX-JgW">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="38"/>
+                                        <state key="normal" title="Button5Stars" image="5Stars.png"/>
+                                        <connections>
+                                            <action selector="rateAction:" destination="Tux-MZ-nHx" eventType="touchUpInside" id="w9o-5y-Gna"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4Q-Pv-81H">
+                                        <rect key="frame" x="0.0" y="38" width="307" height="38"/>
+                                        <state key="normal" title="Button4Stars" image="4Stars.png"/>
+                                        <connections>
+                                            <action selector="rateAction:" destination="Tux-MZ-nHx" eventType="touchUpInside" id="REI-mP-4UI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUj-2c-B16">
+                                        <rect key="frame" x="0.0" y="76" width="307" height="38"/>
+                                        <state key="normal" title="Button3Stars" image="3Stars.png"/>
+                                        <connections>
+                                            <action selector="rateAction:" destination="Tux-MZ-nHx" eventType="touchUpInside" id="L2I-Of-8E3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jB-O6-Rkk">
+                                        <rect key="frame" x="0.0" y="114" width="307" height="38"/>
+                                        <state key="normal" title="Button2Stars" image="2Stars.png"/>
+                                        <connections>
+                                            <action selector="rateAction:" destination="Tux-MZ-nHx" eventType="touchUpInside" id="IqO-x4-DMl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-dd-8Tp">
+                                        <rect key="frame" x="0.0" y="152" width="307" height="38"/>
+                                        <state key="normal" title="Button1Star" image="1Star.png"/>
+                                        <connections>
+                                            <action selector="rateAction:" destination="Tux-MZ-nHx" eventType="touchUpInside" id="BoS-W2-HQj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OIo-rQ-EJ2" firstAttribute="centerX" secondItem="eKF-oS-ak5" secondAttribute="centerX" id="UyQ-3A-FWp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rate Player" id="OhX-52-jyl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGA-aD-ZFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2824" y="846"/>
         </scene>
         <!--Choose Game-->
         <scene sceneID="wLu-b2-ELm">
@@ -281,10 +348,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1Star.png" width="38" height="38"/>
+        <image name="2Stars.png" width="78" height="38"/>
+        <image name="3Stars.png" width="119" height="38"/>
+        <image name="4Stars.png" width="160" height="38"/>
+        <image name="5Stars.png" width="200" height="38"/>
         <image name="Gestures.png" width="30" height="30"/>
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="quE-CC-cPz"/>
+        <segue reference="LaW-C3-noF"/>
     </inferredMetricsTieBreakers>
 </document>
