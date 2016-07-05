@@ -16,7 +16,7 @@
 
 @implementation PlayersViewController
 
-@synthesize players;
+//@synthesize players;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

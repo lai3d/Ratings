@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGA-aD-ZFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824" y="846"/>
+            <point key="canvasLocation" x="2822" y="854"/>
         </scene>
         <!--Choose Game-->
         <scene sceneID="wLu-b2-ELm">
@@ -266,7 +266,7 @@
         <!--Gestures-->
         <scene sceneID="EI7-Ui-2gM">
             <objects>
-                <viewController title="Gestures" id="kgX-mi-9Ao" sceneMemberID="viewController">
+                <viewController title="Gestures" id="kgX-mi-9Ao" customClass="GesturesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zty-f1-9kH"/>
                         <viewControllerLayoutGuide type="bottom" id="Iz8-p2-BVy"/>
@@ -426,6 +426,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LaW-C3-noF"/>
-        <segue reference="qi9-na-78E"/>
+        <segue reference="Q8j-ww-lUM"/>
     </inferredMetricsTieBreakers>
 </document>

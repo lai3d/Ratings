@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface GesturesViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *players;
 
 @end
 

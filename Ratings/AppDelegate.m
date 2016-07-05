@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Player.h"
 #import "PlayersViewController.h"
+#import "GesturesViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,34 +17,37 @@
 
 @implementation AppDelegate
 
-NSMutableArray *players;
+NSMutableArray *_players;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    players = [NSMutableArray arrayWithCapacity:20];
+    _players = [NSMutableArray arrayWithCapacity:20];
     
     Player *player = [[Player alloc] init];
     player.name = @"Bill Evans";
     player.game = @"Tic-Tac-Toe";
     player.rating = 4;
-    [players addObject:player];
+    [_players addObject:player];
     
     player = [[Player alloc] init];
     player.name = @"Oscar Peterson";
     player.game = @"Spin the Bottle";
     player.rating = 5;
-    [players addObject:player];
+    [_players addObject:player];
     
     player = [[Player alloc] init];
     player.name = @"Dave Brubeck";
     player.game = @"Texas Hold’em Poker";
     player.rating = 2;
-    [players addObject:player];
+    [_players addObject:player];
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
     PlayersViewController *playersViewController = [[navigationController viewControllers] objectAtIndex:0];
-    playersViewController.players = players;
+    playersViewController.players = _players;
+    
+    GesturesViewController *gestureViewController = [[tabBarController viewControllers] objectAtIndex:1];
+    gestureViewController.players = _players;
     
     return YES;
 }
