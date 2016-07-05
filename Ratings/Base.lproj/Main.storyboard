@@ -170,7 +170,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rnX-b1-gmW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eKF-oS-ak5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-rQ-EJ2">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGA-aD-ZFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="854"/>
+            <point key="canvasLocation" x="2822" y="846"/>
         </scene>
         <!--Choose Game-->
         <scene sceneID="wLu-b2-ELm">
@@ -393,6 +393,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Tux-MZ-nHx" kind="push" identifier="RatePlayer" id="Vm0-7W-e9F"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pok-CQ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,6 +429,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LaW-C3-noF"/>
+        <segue reference="Vm0-7W-e9F"/>
         <segue reference="Q8j-ww-lUM"/>
     </inferredMetricsTieBreakers>
 </document>

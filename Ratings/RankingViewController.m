@@ -30,6 +30,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)done:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -92,18 +96,36 @@
 }
 */
 
-/*
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Player *player = self.rankedPlayers[indexPath.row];
+    [self performSegueWithIdentifier:@"RatePlayer" sender:player];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"RatePlayer"]) {
+        RatePlayerViewController *ratePlayerViewController = segue.destinationViewController;
+        ratePlayerViewController.delegate = self;
+        ratePlayerViewController.player = sender;
+    }
 }
-*/
 
-- (IBAction)done:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+#pragma mark - RatePlayerViewControllerDelegate
+
+- (void)ratePlayerViewController:(RatePlayerViewController *)controller didPickRatingForPlayer:(Player *)player {
+    if(player.rating != self.requiredRating) {
+        NSUInteger index = [self.rankedPlayers indexOfObject:player];
+        [self.rankedPlayers removeObjectAtIndex:index];
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

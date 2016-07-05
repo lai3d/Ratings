@@ -16,21 +16,6 @@
 
 @implementation GesturesViewController
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"BestPlayers"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        RankingViewController *rankingViewController = [navigationController viewControllers][0];
-        rankingViewController.rankedPlayers = [self playersWithRating:5];
-        rankingViewController.title = @"Best Players";
-    } else if([segue.identifier isEqualToString:@"WorstPlayers"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        RankingViewController *rankingViewController = [navigationController viewControllers][0];
-        rankingViewController.rankedPlayers = [self playersWithRating:1];
-        rankingViewController.title = @"Worst Players";
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -39,6 +24,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"BestPlayers"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        RankingViewController *rankingViewController = [navigationController viewControllers][0];
+        rankingViewController.rankedPlayers = [self playersWithRating:5];
+        rankingViewController.title = @"Best Players";
+        rankingViewController.requiredRating = 5;
+    } else if([segue.identifier isEqualToString:@"WorstPlayers"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        RankingViewController *rankingViewController = [navigationController viewControllers][0];
+        rankingViewController.rankedPlayers = [self playersWithRating:1];
+        rankingViewController.title = @"Worst Players";
+        rankingViewController.requiredRating = 1;
+    }
 }
 
 - (NSMutableArray *)playersWithRating:(int)rating {
