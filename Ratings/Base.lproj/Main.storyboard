@@ -306,7 +306,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-q2-4s6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Yfb-BY-mlB">
                     <connections>
-                        <segue destination="RQQ-io-c1P" kind="modal" identifier="BestPlayers" id="Q8j-ww-lUM"/>
+                        <segue destination="RQQ-io-c1P" kind="modal" identifier="BestPlayers" customClass="SuperCoolSegue" id="Q8j-ww-lUM"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="ybw-uD-Yii">
