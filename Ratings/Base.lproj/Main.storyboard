@@ -68,12 +68,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="jxm-bM-Td2" kind="modal" identifier="EditPlayer" id="LaW-C3-noF"/>
+                        <segue destination="jxm-bM-Td2" kind="presentation" identifier="EditPlayer" id="LaW-C3-noF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHA-NZ-sTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="71"/>
+            <point key="canvasLocation" x="1231" y="-123"/>
         </scene>
         <!--Add Player-->
         <scene sceneID="eo5-6s-YEX">
@@ -159,7 +159,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RI-Wk-U8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="71"/>
+            <point key="canvasLocation" x="2842" y="-123"/>
         </scene>
         <!--Rate Player-->
         <scene sceneID="svG-pi-3ui">
@@ -170,7 +170,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rnX-b1-gmW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eKF-oS-ak5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-rQ-EJ2">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGA-aD-ZFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="846"/>
+            <point key="canvasLocation" x="2842" y="652"/>
         </scene>
         <!--Choose Game-->
         <scene sceneID="wLu-b2-ELm">
@@ -261,7 +261,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV9-ug-X9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3601" y="71"/>
+            <point key="canvasLocation" x="3621" y="-123"/>
         </scene>
         <!--Gestures-->
         <scene sceneID="EI7-Ui-2gM">
@@ -315,7 +315,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="360" y="846"/>
+            <point key="canvasLocation" x="380" y="652"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lJu-tJ-pTh">
@@ -333,7 +333,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfM-Dg-XjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-460" y="439"/>
+            <point key="canvasLocation" x="-440" y="245"/>
         </scene>
         <!--Players-->
         <scene sceneID="hZ5-wd-ttb">
@@ -352,7 +352,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVU-RR-Dh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="71"/>
+            <point key="canvasLocation" x="380" y="-123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7vy-iR-yAv">
@@ -371,7 +371,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZD-YR-mwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="71"/>
+            <point key="canvasLocation" x="2030" y="-123"/>
         </scene>
         <!--Ranking-->
         <scene sceneID="HiI-oU-pfA">
@@ -399,7 +399,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pok-CQ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="846"/>
+            <point key="canvasLocation" x="2030" y="652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbf-0q-bXZ">
@@ -415,7 +415,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2V-Nn-YcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="846"/>
+            <point key="canvasLocation" x="1231" y="652"/>
         </scene>
     </scenes>
     <resources>
@@ -428,8 +428,8 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qi9-na-78E"/>
         <segue reference="LaW-C3-noF"/>
-        <segue reference="Vm0-7W-e9F"/>
-        <segue reference="Q8j-ww-lUM"/>
+        <segue reference="tDK-eH-2kN"/>
     </inferredMetricsTieBreakers>
 </document>
