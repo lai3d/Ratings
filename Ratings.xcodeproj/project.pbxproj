@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281751291D2F781C007D159A /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281751271D2F781C007D159A /* Main-iPad.storyboard */; };
+		2817512C1D2F8364007D159A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2817512B1D2F8364007D159A /* DetailViewController.m */; };
+		2817512F1D2F8EBF007D159A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2817512E1D2F8EBF007D159A /* MasterViewController.m */; };
 		282CF4F31D211908009631B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F21D211908009631B7 /* main.m */; };
 		282CF4F61D211908009631B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F51D211908009631B7 /* AppDelegate.m */; };
 		282CF4F91D211908009631B7 /* GesturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F81D211908009631B7 /* GesturesViewController.m */; };
@@ -48,6 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281751281D2F781C007D159A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Ratings/Base.lproj/Main-iPad.storyboard"; sourceTree = "<group>"; };
+		2817512A1D2F8364007D159A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2817512B1D2F8364007D159A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2817512D1D2F8EBF007D159A /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		2817512E1D2F8EBF007D159A /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		282CF4EE1D211908009631B7 /* Ratings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282CF4F21D211908009631B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		282CF4F41D211908009631B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,10 +141,14 @@
 			children = (
 				282CF4F41D211908009631B7 /* AppDelegate.h */,
 				282CF4F51D211908009631B7 /* AppDelegate.m */,
+				2817512A1D2F8364007D159A /* DetailViewController.h */,
+				2817512B1D2F8364007D159A /* DetailViewController.m */,
 				282CF54E1D24F1B6009631B7 /* GamePickerViewController.h */,
 				282CF54F1D24F1B6009631B7 /* GamePickerViewController.m */,
 				282CF4F71D211908009631B7 /* GesturesViewController.h */,
 				282CF4F81D211908009631B7 /* GesturesViewController.m */,
+				2817512D1D2F8EBF007D159A /* MasterViewController.h */,
+				2817512E1D2F8EBF007D159A /* MasterViewController.m */,
 				282CF53F1D21339A009631B7 /* Player.h */,
 				282CF5401D21339A009631B7 /* Player.m */,
 				282CF5421D221C3C009631B7 /* PlayerCell.h */,
@@ -150,6 +162,7 @@
 				28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */,
 				28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */,
 				282CF4FA1D211908009631B7 /* Main.storyboard */,
+				281751271D2F781C007D159A /* Main-iPad.storyboard */,
 				285035AC1D2BADA200E830D1 /* SuperCoolSegue.h */,
 				285035AD1D2BADA200E830D1 /* SuperCoolSegue.m */,
 				282CF4FD1D211908009631B7 /* Assets.xcassets */,
@@ -280,6 +293,7 @@
 				282CF5281D212BBE009631B7 /* 2StarsSmall@2x.png in Resources */,
 				282CF52D1D212BBE009631B7 /* 4Stars.png in Resources */,
 				282CF5221D212BBE009631B7 /* 1Star@2x.png in Resources */,
+				281751291D2F781C007D159A /* Main-iPad.storyboard in Resources */,
 				282CF5341D212BBE009631B7 /* 5StarsSmall@2x.png in Resources */,
 				282CF52E1D212BBE009631B7 /* 4Stars@2x.png in Resources */,
 				282CF5321D212BBE009631B7 /* 5Stars@2x.png in Resources */,
@@ -296,6 +310,7 @@
 			files = (
 				28B535BC1D2660C200B52DE1 /* RatePlayerViewController.m in Sources */,
 				282CF4F91D211908009631B7 /* GesturesViewController.m in Sources */,
+				2817512F1D2F8EBF007D159A /* MasterViewController.m in Sources */,
 				282CF4F61D211908009631B7 /* AppDelegate.m in Sources */,
 				285035AE1D2BADA200E830D1 /* SuperCoolSegue.m in Sources */,
 				282CF4F31D211908009631B7 /* main.m in Sources */,
@@ -305,12 +320,22 @@
 				282CF5411D21339A009631B7 /* Player.m in Sources */,
 				282CF54D1D22493C009631B7 /* PlayerDetailsViewController.m in Sources */,
 				28A991661D267BBB00C93BB5 /* RankingViewController.m in Sources */,
+				2817512C1D2F8364007D159A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		281751271D2F781C007D159A /* Main-iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				281751281D2F781C007D159A /* Base */,
+			);
+			name = "Main-iPad.storyboard";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		282CF4FA1D211908009631B7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -421,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superfun.Ratings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -433,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superfun.Ratings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

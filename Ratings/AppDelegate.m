@@ -41,13 +41,19 @@ NSMutableArray *_players;
     player.rating = 2;
     [_players addObject:player];
     
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
-    PlayersViewController *playersViewController = [[navigationController viewControllers] objectAtIndex:0];
-    playersViewController.players = _players;
-    
-    GesturesViewController *gestureViewController = [[tabBarController viewControllers] objectAtIndex:1];
-    gestureViewController.players = _players;
+    if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *navigationController = [[tabBarController viewControllers] objectAtIndex:0];
+        PlayersViewController *playersViewController = [[navigationController viewControllers] objectAtIndex:0];
+        playersViewController.players = _players;
+        
+        GesturesViewController *gestureViewController = [[tabBarController viewControllers] objectAtIndex:1];
+        gestureViewController.players = _players;
+    } else {
+        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+        
+        splitViewController.delegate = [splitViewController.viewControllers lastObject];
+    }
     
     return YES;
 }
