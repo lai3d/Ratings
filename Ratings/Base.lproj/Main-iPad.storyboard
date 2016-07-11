@@ -20,9 +20,10 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-cp-hNp">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6Tc-dI-h5G"/>
                                     <barButtonItem title="Menu" id="Qi5-Ne-5oI">
                                         <connections>
-                                            <segue destination="6dL-af-0dP" kind="popoverPresentation" identifier="ShowPopover" customClass="UIStoryboardPopoverSegue" popoverAnchorBarButtonItem="Qi5-Ne-5oI" id="1hv-ph-LcL">
+                                            <segue destination="6dL-af-0dP" kind="popoverPresentation" popoverAnchorBarButtonItem="Qi5-Ne-5oI" id="s9v-cJ-atr">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -38,29 +39,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYb-9g-kJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="837"/>
+            <point key="canvasLocation" x="459" y="830"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Z9-F5-rGB">
             <objects>
-                <viewController id="6dL-af-0dP" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="6dL-af-0dP" userLabel="View Controller" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gmw-RT-3fl"/>
                         <viewControllerLayoutGuide type="bottom" id="ytK-aP-PEr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qM7-Ah-Tci">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZEG-cG-Ttj"/>
                     <value key="contentSizeForViewInPopover" type="size" width="400" height="400"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
+                    <size key="freeformSize" width="400" height="400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVm-CC-rWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="837"/>
+            <point key="canvasLocation" x="1179" y="830"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="jMv-N3-Yyu">

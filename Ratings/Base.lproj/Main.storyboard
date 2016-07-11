@@ -170,7 +170,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rnX-b1-gmW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eKF-oS-ak5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-rQ-EJ2">
@@ -306,12 +306,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nM3-q2-4s6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Yfb-BY-mlB">
                     <connections>
-                        <segue destination="RQQ-io-c1P" kind="modal" identifier="BestPlayers" customClass="SuperCoolSegue" id="Q8j-ww-lUM"/>
+                        <segue destination="RQQ-io-c1P" kind="presentation" identifier="BestPlayers" customClass="SuperCoolSegue" id="Q8j-ww-lUM"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <tapGestureRecognizer numberOfTapsRequired="2" id="ybw-uD-Yii">
                     <connections>
-                        <segue destination="RQQ-io-c1P" kind="modal" identifier="WorstPlayers" id="qi9-na-78E"/>
+                        <segue destination="RQQ-io-c1P" kind="presentation" identifier="WorstPlayers" id="qi9-na-78E"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -394,7 +394,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Tux-MZ-nHx" kind="push" identifier="RatePlayer" id="Vm0-7W-e9F"/>
+                        <segue destination="Tux-MZ-nHx" kind="show" identifier="RatePlayer" id="Vm0-7W-e9F"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pok-CQ-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,8 +428,8 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qi9-na-78E"/>
         <segue reference="LaW-C3-noF"/>
-        <segue reference="tDK-eH-2kN"/>
+        <segue reference="Vm0-7W-e9F"/>
+        <segue reference="qi9-na-78E"/>
     </inferredMetricsTieBreakers>
 </document>
