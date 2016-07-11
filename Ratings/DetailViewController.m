@@ -70,7 +70,8 @@
 
 - (void)splitViewController:(UISplitViewController *)svc
      willShowViewController:(UIViewController *)aViewController
-  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
     NSMutableArray *items = [[self.toolbar items] mutableCopy];
     [items removeObject:barButtonItem];
     [self.toolbar setItems:items animated:YES];
@@ -79,12 +80,15 @@
 
 #pragma mark - UIPopoverControllerDelegate
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
     _menuPopoverController.delegate = nil;
     _menuPopoverController = nil;
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                         duration:(NSTimeInterval)duration
+{
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
 //    if(_menuPopoverController != nil && _menuPopoverController.popoverVisible) {

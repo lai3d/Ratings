@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-cp-hNp">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6Tc-dI-h5G"/>
                                     <barButtonItem title="Menu" id="Qi5-Ne-5oI">
                                         <connections>
-                                            <segue destination="6dL-af-0dP" kind="popoverPresentation" popoverAnchorBarButtonItem="Qi5-Ne-5oI" id="s9v-cJ-atr">
+                                            <segue destination="6dL-af-0dP" kind="popoverPresentation" identifier="ShowPopover" popoverAnchorBarButtonItem="Qi5-Ne-5oI" id="s9v-cJ-atr">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
