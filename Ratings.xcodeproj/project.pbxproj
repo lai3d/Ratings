@@ -13,7 +13,7 @@
 		282CF4F31D211908009631B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F21D211908009631B7 /* main.m */; };
 		282CF4F61D211908009631B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F51D211908009631B7 /* AppDelegate.m */; };
 		282CF4F91D211908009631B7 /* GesturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CF4F81D211908009631B7 /* GesturesViewController.m */; };
-		282CF4FC1D211908009631B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FA1D211908009631B7 /* Main.storyboard */; };
+		282CF4FC1D211908009631B7 /* Main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FA1D211908009631B7 /* Main-iPhone.storyboard */; };
 		282CF4FE1D211908009631B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FD1D211908009631B7 /* Assets.xcassets */; };
 		282CF5011D211908009631B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282CF4FF1D211908009631B7 /* LaunchScreen.storyboard */; };
 		282CF5211D212BBE009631B7 /* 1Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 282CF5091D212BBE009631B7 /* 1Star.png */; };
@@ -62,7 +62,7 @@
 		282CF4F51D211908009631B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		282CF4F71D211908009631B7 /* GesturesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GesturesViewController.h; sourceTree = "<group>"; };
 		282CF4F81D211908009631B7 /* GesturesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GesturesViewController.m; sourceTree = "<group>"; };
-		282CF4FB1D211908009631B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		282CF4FB1D211908009631B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-iPhone.storyboard"; sourceTree = "<group>"; };
 		282CF4FD1D211908009631B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		282CF5001D211908009631B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		282CF5021D211908009631B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				28A991651D267BBB00C93BB5 /* RankingViewController.m */,
 				28B535BA1D2660C200B52DE1 /* RatePlayerViewController.h */,
 				28B535BB1D2660C200B52DE1 /* RatePlayerViewController.m */,
-				282CF4FA1D211908009631B7 /* Main.storyboard */,
+				282CF4FA1D211908009631B7 /* Main-iPhone.storyboard */,
 				281751271D2F781C007D159A /* Main-iPad.storyboard */,
 				285035AC1D2BADA200E830D1 /* SuperCoolSegue.h */,
 				285035AD1D2BADA200E830D1 /* SuperCoolSegue.m */,
@@ -281,7 +281,7 @@
 				282CF5361D212BBE009631B7 /* Gestures@2x.png in Resources */,
 				282CF5291D212BBE009631B7 /* 3Stars.png in Resources */,
 				282CF5351D212BBE009631B7 /* Gestures.png in Resources */,
-				282CF4FC1D211908009631B7 /* Main.storyboard in Resources */,
+				282CF4FC1D211908009631B7 /* Main-iPhone.storyboard in Resources */,
 				282CF5371D212BBE009631B7 /* Players.png in Resources */,
 				282CF52B1D212BBE009631B7 /* 3StarsSmall.png in Resources */,
 				282CF5251D212BBE009631B7 /* 2Stars.png in Resources */,
@@ -336,12 +336,12 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		282CF4FA1D211908009631B7 /* Main.storyboard */ = {
+		282CF4FA1D211908009631B7 /* Main-iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				282CF4FB1D211908009631B7 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main-iPhone.storyboard";
 			sourceTree = "<group>";
 		};
 		282CF4FF1D211908009631B7 /* LaunchScreen.storyboard */ = {
